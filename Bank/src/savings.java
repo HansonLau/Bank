@@ -112,17 +112,14 @@ public class savings {
 		
 		String ans = JOptionPane.showInputDialog("Would you like to change value too? ");
 		boolean change = (ans.equalsIgnoreCase("yes"));
-		
+		PrintWriter outputFile = new PrintWriter("Saving.txt");
 		if (choice.equalsIgnoreCase("stop"))
 			System.exit(0);
-		
-		else if (choice.equalsIgnoreCase("a")) {
+			else if (choice.equalsIgnoreCase("a")) {
 			t = JOptionPane.showInputDialog("Enter add amount ");
 			add = Double.parseDouble(t);
 			JOptionPane.showMessageDialog(null, (number + add));
 			if (change) {
-				PrintWriter outputFile = new PrintWriter("Saving.txt");
-				
 				Double val = number + add;
 				
 				outputFile.println(val);
@@ -135,8 +132,6 @@ public class savings {
 			sub = Double.parseDouble(t2);
 			JOptionPane.showMessageDialog(null, (number - sub));
 			if (change) {
-				PrintWriter outputFile = new PrintWriter("Saving.txt");
-				
 				Double val = number - sub;
 				
 				outputFile.println(val);
@@ -149,8 +144,6 @@ public class savings {
 			mul = Double.parseDouble(t3);
 			JOptionPane.showMessageDialog(null, (number * mul));
 			if (change) {
-				PrintWriter outputFile = new PrintWriter("Saving.txt");
-				
 				Double val = number * mul;
 				
 				outputFile.println(val);
@@ -163,8 +156,6 @@ public class savings {
 			div = Double.parseDouble(t4);
 			JOptionPane.showMessageDialog(null, (number / div));
 			if (change) {
-				PrintWriter outputFile = new PrintWriter("Saving.txt");
-				
 				Double val = number / div;
 				
 				outputFile.println(val);
