@@ -37,8 +37,10 @@ public class savings {
 	public static void open() throws FileNotFoundException{     // Shows value inside of file
 		File myFile = new File("Saving.txt");
 		Scanner scan = new Scanner(myFile);
-		
-		number = scan.nextDouble();
+		if(scan.hasNextLine())
+			number = scan.nextDouble();
+		else
+			number = 0;
 		JOptionPane.showMessageDialog(null, number);
 		
 		scan.close();
